@@ -2,4 +2,114 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  overflow-x: hidden;
+  font-family: 'IBM Plex mono', sans-serif;
+}
+
+.header {
+  padding: 10px;
+  color: var(--red);
+  position: relative;
+  background-image: url(../images/cover-image-dark.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.header:before {
+  content: '';
+  color: var(--red);
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--red);
+  border-right: 1px solid var(--red);
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.header:after {
+  content: '';
+  color: var(--red);
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--red);
+  border-left: 1px solid var(--red);
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+.recording-element {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: end;
+  padding-right: 28px;
+  position: relative;
+  line-height: 25px;
+}
+
+.recording-element::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  top: 8px;
+  right: 9px;
+  border-radius: 50%;
+  background-color: var(--red);
+  position: absolute;
+  box-shadow: 0 0 4.5px 2.5px var(--red);
+}
+
+.header__theme-menu-list {
+  margin-block-start: 39px;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-size: 18px;
+  padding: 1.5px 13px;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  border-color: currentColor;
+}
+
+.header-title {
+  margin-top: 65px;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 86%;
+  color: var(--purple);
+  text-shadow: 4px 4px 0 var(--red);
+}
+
+.header-discription {
+  font-size: 18px;
+  padding-right: 20px;
+  margin-top: 55px;
+  margin-bottom: 56px;
+}
+
+.title-decor {
+  color: var(--dark-blue);
+  background-color: var(--red);
+  font-weight: 700;
+  text-wrap: wrap;
+  line-height: 23.4px;
+  width: 100%;
+}
+
+.main {
+  padding: 0 10px 0 10px;
+  
+  background-color: var(--bg-page);
+
+}
+
+.question-section {
+  margin-top: 40px;
 }
