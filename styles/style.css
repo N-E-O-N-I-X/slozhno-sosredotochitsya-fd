@@ -32,7 +32,7 @@
 }
 
 .header:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10px;
   right: 10px;
@@ -44,7 +44,7 @@
 }
 
 .header:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -58,7 +58,7 @@
 @media (width >= 768px) {
   .header:before {
     top: 20px;
-    right: 20px; 
+    right: 20px;
   }
   .header:after {
     bottom: 20px;
@@ -82,7 +82,7 @@
 }
 
 .recording-element::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   left: 42px;
@@ -177,8 +177,8 @@
 .main {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 10px 0 10px;
   gap: 10px;
+  padding: 0 10px 0 10px;
 }
 
 @media (width >= 768px) {
@@ -213,6 +213,7 @@
   }
   .page-section {
     grid-template-columns: 1fr 2fr;
+    gap: 20px;
     padding-top: 60px;
   }
   .section-list {
@@ -307,7 +308,7 @@
   .gallery-image:nth-child(3) {
     grid-column: 1;
     grid-row: 2 / 4;
-    
+
     block-size: 100%;
   }
   .gallery-image:nth-child(4) {
@@ -351,7 +352,7 @@
 }
 
 .footer:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10px;
   right: 10px;
@@ -363,7 +364,7 @@
 }
 
 .footer:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -396,7 +397,7 @@
   }
   .footer:before {
     top: 20px;
-    right: 20px; 
+    right: 20px;
   }
   .footer:after {
     bottom: 20px;
