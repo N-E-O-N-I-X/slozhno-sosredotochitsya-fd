@@ -9,16 +9,16 @@
 }
 
 .header {
-  padding: 10px;
-  color: var(--accent-color);
   position: relative;
-  background-image: var(--header-bg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
+  color: var(--accent-color);
+  background-image: var(--header-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 @media (width >= 768px) {
@@ -30,26 +30,26 @@
 
 .header:before {
   content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
   color: var(--corner-decor-color);
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
-  top: 10px;
-  right: 10px;
-  position: absolute;
 }
 
 .header:after {
   content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
   color: var(--corner-decor-color);
   inline-size: 25px;
   block-size: 25px;
-  border-bottom: 1px solid currentColor;
-  border-left: 1px solid currentColor;
-  bottom: 10px;
-  left: 10px;
-  position: absolute;
 }
 
 @media (width >= 768px) {
@@ -64,12 +64,12 @@
 }
 
 .recording-element {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: end;
-  right: 38px;
   position: absolute;
+  right: 38px;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 25px;
+  text-align: end;
 }
 
 @media (width >= 768px) {
@@ -80,23 +80,23 @@
 
 .recording-element::after {
   content: '';
-  width: 9px;
-  height: 9px;
+  position: absolute;
   top: 8px;
   left: 42px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color);
-  position: absolute;
   box-shadow: 0 0 4.5px 2.5px var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .header__theme-menu-list {
-  margin-block-start: 65px;
-  text-align: end;
   display: flex;
   flex-direction: column;
-  color: var(--header-menu-color);
   gap: 10px;
+  margin-block-start: 65px;
+  color: var(--header-menu-color);
+  text-align: end;
 }
 
 @media (width >= 768px) {
@@ -108,25 +108,25 @@
 @media (width >= 1024px) {
   .header__theme-menu-list {
     flex-direction: row;
-    margin-block-start: 0px;
     justify-self: center;
+    margin-block-start: 0px;
   }
 }
 
 .header__theme-menu-button {
-  font-size: 18px;
-  padding: 1.5px 13px;
-  background-color: transparent;
   border: none;
-  text-transform: lowercase;
   border-color: currentColor;
+  padding: 1.5px 13px;
+  font-size: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
 }
 
 .header-title {
+  color: var(--title-text-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  color: var(--title-text-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -137,57 +137,57 @@
 }
 
 .header-discription {
-  inline-size: 100%;
-  font-size: 18px;
-  padding-right: 20px;
   margin-top: 55px;
   margin-bottom: 56px;
+  padding-right: 20px;
   font-weight: 700;
+  font-size: 18px;
+  inline-size: 100%;
 }
 
 @media (width >= 768px) {
   .header-discription {
-    inline-size: 49%;
     margin-top: 162px;
+    margin-right: 0;
     margin-bottom: 163px;
     margin-left: auto;
-    margin-right: 0;
+    inline-size: 49%;
   }
 }
 
 @media (width >= 1024px) {
   .header-discription {
-    padding-right: 0px;
     margin-top: 114px;
     margin-bottom: 114px;
+    padding-right: 0px;
   }
 }
 
 .title-decor {
   color: var(--header-discription-color);
+  font-size: 18px;
+  line-height: 23.4px;
   background-color: var(--accent-color);
   text-wrap: wrap;
-  line-height: 23.4px;
-  font-size: 18px;
 }
 
 .main {
-  padding: 0 10px 0 10px;
   display: grid;
   grid-template-columns: 1fr;
+  padding: 0 10px 0 10px;
 }
 
 @media (width >= 768px) {
   .main {
-    padding: 0 20px 0 20px;
     gap: 20px;
+    padding: 0 20px 0 20px;
   }
 }
 
 .page-section {
-  padding-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
+  padding-top: 40px;
 }
 
 .page-section:last-child {
@@ -255,9 +255,9 @@
 }
 
 .section__text {
-  font-size: 18px;
-  color: var(--main-text-color);
   margin-top: 10px;
+  color: var(--main-text-color);
+  font-size: 18px;
 }
 
 .highlight-word {
@@ -282,8 +282,8 @@
 }
 
 .gallery-image {
-  inline-size: 100%;
   object-fit: cover;
+  inline-size: 100%;
 }
 
 @media (width >= 768px) {
@@ -313,8 +313,8 @@
 }
 
 .header__theme-menu-button:hover {
-  cursor: pointer;
   outline: 0.1px solid currentColor;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -327,8 +327,8 @@
 }
 
 .highlight-word:hover {
-  cursor: pointer;
   border-bottom: 1px solid currentColor;
+  cursor: pointer;
 }
 
 .highlight-word:focus-visible {
@@ -336,43 +336,43 @@
 }
 
 .footer {
+  position: relative;
   width: 100%;
   padding: 10px;
-  position: relative;
 }
 
 .footer:before {
   content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
   color: var(--corner-decor-color);
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
-  top: 10px;
-  right: 10px;
-  position: absolute;
 }
 
 .footer:after {
   content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
   color: var(--corner-decor-color);
   inline-size: 25px;
   block-size: 25px;
-  border-bottom: 1px solid currentColor;
-  border-left: 1px solid currentColor;
-  bottom: 10px;
-  left: 10px;
-  position: absolute;
 }
 
 .footer-title {
-  text-align: center;
   margin-top: 276px;
   margin-bottom: 275px;
+  color: var(--title-text-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 86%;
-  color: var(--title-text-color);
+  text-align: center;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
