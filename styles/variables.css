@@ -15,5 +15,8 @@
   --accent-color: #ff0070;
   --main-text-color: #F1B2CE;
   --bg-color: #000028;
-  --title-text-color: #000028;
+  --header-menu-color: #ff0070;
+  --header-discription-color: #000028;
+  --corner-decor-color: #ff0070;
+  --header-bg: url(../images/cover-image-dark.png);
 }
