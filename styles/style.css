@@ -178,6 +178,7 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 10px 0 10px;
+  gap: 10px;
 }
 
 @media (width >= 768px) {
@@ -207,9 +208,11 @@
 }
 
 @media (width >= 768px) {
+  .main {
+    gap: 20px;
+  }
   .page-section {
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
     padding-top: 60px;
   }
   .section-list {
