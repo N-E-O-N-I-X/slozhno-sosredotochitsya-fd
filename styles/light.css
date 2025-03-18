@@ -21,6 +21,13 @@
   --header-bg: url(../images/cover-image-light.png);
 }
 
+.theme-light .header {
+  /* Вам также нужно будет написать ряд подобных селекторов */
+  .recording-element {
+    display: none;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --text-color: #353430;
@@ -34,9 +41,6 @@
     --corner-decor-color: #353430;
     --header-bg: url(../images/cover-image-light.png);
   }
-}
-.theme-light .header {
-  /* Вам также нужно будет написать ряд подобных селекторов */
   .recording-element {
     display: none;
   }
