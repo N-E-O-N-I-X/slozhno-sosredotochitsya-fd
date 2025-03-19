@@ -3,9 +3,12 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   width: 100%;
-  overflow-x: hidden;
   font-family: var(--main-font), sans-serif;
   background-color: var(--bg-color);
+  background-image: var(--header-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -15,13 +18,9 @@
   grid-template-rows: 1fr min-content 1fr;
   padding: 10px;
   color: var(--accent-color);
-  background-image: var(--header-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   inline-size: 100%;
-  block-size: 100vh;
+  max-block-size: 100vh;
+  min-block-size: 668px;
 }
 
 @media (width >= 768px) {
@@ -31,7 +30,7 @@
   }
 }
 
-.header:before {
+.decorated-zone:before {
   content: "";
   position: absolute;
   top: 10px;
@@ -43,7 +42,7 @@
   block-size: 25px;
 }
 
-.header:after {
+.decorated-zone:after {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -56,11 +55,11 @@
 }
 
 @media (width >= 768px) {
-  .header:before {
+  .decorated-zone:before {
     top: 20px;
     right: 20px;
   }
-  .header:after {
+  .decorated-zone:after {
     bottom: 20px;
     left: 20px;
   }
@@ -172,6 +171,8 @@
   line-height: 23.4px;
   background-color: var(--accent-color);
   text-wrap: wrap;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .main {
@@ -219,24 +220,24 @@
   .section-list {
     grid-column: 2;
   }
-  .page-section:nth-child(2) .section-list {
+  .different-grid-section .section-list {
     grid-column: 1 / 3;
   }
 }
 
 @media (width >= 1024px) {
-  .page-section:nth-child(2) {
+  .different-grid-section {
     grid-template-columns: 1fr;
   }
-  .page-section:nth-child(2) .section__main-heading {
+  .different-grid-section .section__main-heading {
     inline-size: 33vw;
   }
-  .page-section:nth-child(2) .section-list {
+  .different-grid-section .section-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .page-section:nth-child(2) .section-list li {
+  .different-grid-section .section-list li {
     margin-top: 0;
   }
 }
@@ -326,7 +327,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 0.1px solid currentColor;
+  outline: 1px solid var(--button-hover-color);
   cursor: pointer;
 }
 
@@ -348,31 +349,8 @@
   position: relative;
   padding: 10px;
   inline-size: 100%;
-  block-size: 100vh;
-}
-
-.footer:before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
-  color: var(--corner-decor-color);
-  inline-size: 25px;
-  block-size: 25px;
-}
-
-.footer:after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  border-bottom: 1px solid currentColor;
-  border-left: 1px solid currentColor;
-  color: var(--corner-decor-color);
-  inline-size: 25px;
-  block-size: 25px;
+  max-block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer-title {
@@ -394,14 +372,6 @@
     margin-top: 443px;
     margin-bottom: 442px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-  .footer:before {
-    top: 20px;
-    right: 20px;
-  }
-  .footer:after {
-    bottom: 20px;
-    left: 20px;
   }
 }
 

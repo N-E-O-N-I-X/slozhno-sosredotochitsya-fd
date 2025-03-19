@@ -16,6 +16,7 @@
   --header-menu-color: #ff0070;
   --corner-decor-color: #ff0070;
   --section-heading-color: #ff0070;
+  --button-hover-color: rgba(255, 0, 112, 0.5);
   --header-bg: url(../images/cover-image-dark.png);
 }
 
