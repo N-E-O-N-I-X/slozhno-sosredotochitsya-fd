@@ -43,6 +43,7 @@
     --button-hover-color: rgba(53, 52, 48, 0.5);
     --header-bg: url(../images/cover-image-light.png);
   }
+
   .recording-element {
     display: none;
   }
