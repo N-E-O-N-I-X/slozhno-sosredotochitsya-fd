@@ -224,7 +224,7 @@
 
 @media (width >= 1024px) {
   .page-section {
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.1fr;
   }
   .different-grid-section {
     grid-template-columns: 1fr;
