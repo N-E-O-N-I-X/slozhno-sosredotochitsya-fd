@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   width: 100%;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   background-color: var(--bg-color);
   background-image: var(--header-bg);
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@
 
 @media (width >= 768px) {
   .header__theme-menu-list {
-    margin-block-start: 122px;
+    margin-block-start: 172px;
   }
 }
 
@@ -139,19 +139,18 @@
 }
 
 .header-discription {
-  margin-top: 55px;
-  margin-bottom: 56px;
+  padding-bottom: 0;
   padding-right: 20px;
   font-weight: 700;
   font-size: 18px;
   inline-size: 100%;
+  block-size: min-content;
+  align-self: center;
 }
 
 @media (width >= 768px) {
   .header-discription {
-    margin-top: 162px;
     margin-right: 0;
-    margin-bottom: 163px;
     margin-left: auto;
     inline-size: 49%;
   }
@@ -159,8 +158,6 @@
 
 @media (width >= 1024px) {
   .header-discription {
-    margin-top: 114px;
-    margin-bottom: 114px;
     padding-right: 0px;
   }
 }
@@ -323,7 +320,7 @@
 }
 
 .header__theme-menu-button:disabled {
-  outline: 1px solid var(--main-text-color);
+  outline: 1px solid var(--header-menu-color);
 }
 
 .header__theme-menu-button:hover {
@@ -349,18 +346,17 @@
   position: relative;
   padding: 10px;
   inline-size: 100%;
-  max-block-size: 100vh;
+  block-size: 100vh;
   min-block-size: 668px;
+  display: flex;
 }
 
 .footer-title {
-  margin-top: 276px;
-  margin-bottom: 275px;
+  margin: auto;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 86%;
-  text-align: center;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
